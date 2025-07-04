@@ -55,14 +55,4 @@ def on_closing():
         txt_edit = Text(app)
 
 app.protocol("WM_DELETE_WINDOW", on_closing)
-fr_buttons = Frame(app, relief=RAISED, bd=2)
-btn_open = Button(fr_buttons, text="Open", command=open_file)
-btn_save = Button(fr_buttons, text="Save File ", command=save_file)
-
-btn_open.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
-btn_save.grid(row=1, column=0, sticky="ew", padx=5)
-
-fr_buttons.grid(row=0, column=0, sticky="ns")
-txt_edit.grid(row=0, column=1, sticky="nsew")
-
 app.mainloop()
